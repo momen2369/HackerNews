@@ -6,7 +6,7 @@ export class NewestPage {
 
   constructor(private readonly page: Page) {
     this.articleRows = page.locator('tr.athing');
-    this.moreLink = page.getByRole('link', { name: 'More' });
+    this.moreLink = page.locator('a.morelink');
   }
 
   async goto(): Promise<void> {
